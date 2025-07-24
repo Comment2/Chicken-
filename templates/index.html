@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prédiction Bombes</title>
+</head>
+<body>
+  <h3>🍀 Sélectionne les bombes des 2 dernières parties</h3>
+  <form method="post">
+    <div>
+      <b>Partie 1 :</b><br>
+      {% for i in range(25) %}
+      <input type="checkbox" name="p1" value="{{ i }}"> {{ i }}
+      {% endfor %}
+    </div>
+    <div>
+      <b>Partie 2 :</b><br>
+      {% for i in range(25) %}
+      <input type="checkbox" name="p2" value="{{ i }}"> {{ i }}
+      {% endfor %}
+    </div>
+    <button type="submit">🔮 Prédire</button>
+  </form>
+  <p>Statistiques : {{ stats }}</p>
+</body>
+</html>
